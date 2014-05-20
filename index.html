@@ -1,17 +1,11 @@
-<html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
-	<script type="text/javascript" src="js/jquery-ui-1.10.4.custom.min.js"></script>
-	<script type="text/javascript" src="js/offertcalculator.js"></script>
-</head>
-<body>
-	<input type="text" id="date_start">
-	<input type="text" id="date_end">
-	<select id="rooms"></select>
-	<form id="persons"></form>
-	<input type="submit" id="calculate">
-	<p>cena: </p><div id="price"></div>
-	<p>dni: </p><div id="days"> </div>
-</body>
-</html>
+---
+layout: page
+title: Main
+permalink: /
+---
+
+{% include main.html %}
+{% include contact.html %}
+{% include gallery.html %}
+{% include offer.html %}
+{% include road.html %}

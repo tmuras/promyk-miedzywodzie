@@ -1,0 +1,51 @@
+<!-- === Slide 4 - Process === -->
+<div class="slide story" id="slide-4" data-slide="4">
+	<div class="container">
+		<div class="row title-row">
+			<div class="col-12 font-thin">Wybierz przedział czasu i wybierz pokój!</div>
+		</div><!-- /row -->
+		<div class="row line-row">
+			<div class="hr">&nbsp;</div>
+		</div><!-- /row -->
+		<div class="row content-row">
+			<div class="col-12 col-sm-4 font-light">
+				<input type="text" id="date_start" class="selectdate" placeholder="Początek rezerwacji">
+			</div>
+			<div class="col-12 col-sm-4 font-light">
+				<input type="text" id="date_end" class="selectdate" placeholder="Koniec rezerwacji">
+			</div>
+			<div class="col-12 col-sm-4 font-light">
+				<select id="rooms" class="selectpicker"></select>
+			</div>
+		</div>
+		</div><!-- /row -->
+		<div class="row content-row">
+			<div class="col-1 col-sm-4 hidden-sm">&nbsp;</div>
+			<div class="col-12 col-sm-4 font-light">
+				<h2 class="font-thin">Ilość osób:</h2>
+				<div id="persons" class="btn-group">
+
+				</div>
+				<input type="hidden" id="person-value"/>
+			</div>
+			<div class="col-1 col-sm-4 hidden-sm">&nbsp;</div>
+
+		</div>
+		<div class="row content-row">
+			<div class="col-12 col-sm-12">
+				<input type="submit" id="calculate" class="btn btn-primary">
+			</div>
+		</div>
+		<div class="row content-row">
+			<div class="col-1 col-sm-4 hidden-sm">&nbsp;</div>
+			<div class="col-12 col-sm-2">
+				<h2 class="font-thin">cena: </h2><div id="price"></div>
+			</div>
+			<div class="col-12 col-sm-2">
+				<h2 class="font-thin">dni: </h2><div id="days"> </div>
+			</div>
+			<div class="col-1 col-sm-4 hidden-sm">&nbsp;</div>
+			</div>
+		</div><!-- /row -->
+	</div><!-- /container -->
+</div><!-- /slide4 -->

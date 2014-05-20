@@ -321,13 +321,15 @@ $(document).ready(function() {
 
     genarateRoomSelect();
 
-    
+    $(".person").on("click", function () {
+        $("#person-value").val($(this).text());
+    });
 
 	$("#calculate").on("click", function() {
 		if (date_start.val() && date_end.val()) {
 
             var room = parseInt($("#rooms").val());
-            var priceForRoom = parseInt($('input[name=persons]:radio:checked').val());
+            var priceForRoom = parseInt($("#person-value").val());
 			var day_start = $("#date_start").datepicker('getDate').getDate();                 
         	var month_start = $("#date_start").datepicker('getDate').getMonth() + 1; 
         	var year_start = $("#date_start").datepicker('getDate').getYear();
@@ -358,11 +360,10 @@ $(document).ready(function() {
 
             $("#price").html(sum);
             $("#days").html(days);
-
 		}
 
 	});
-    
+
     roomsSelected.on("change", function () {
 
         var pricesForPersons = prices[roomsSelected.val()].season_ID.low
@@ -370,12 +371,20 @@ $(document).ready(function() {
         for (var p in pricesForPersons) {
 
             if (pricesForPersons[p] > 0 ) {
-                $("#persons").append("<input type='radio' name='persons' value='" + p + "'>" + p)
+                $("#persons").append("<button type='button' class='btn btn-primary person'>" + p + "</button>")
             }
         };
-        $("#persons input:first").attr("checked", "checked");
+        $("#person-value").val($(".person:first").text());
+        $(".person:first").data('toggle','button');
         
     }).change();
+
+    $('.person').click(function(){
+        //Removing `data-toggle` from all elements
+        $('.person').removeData('toggle');
+        //Adding `data-toggle` on clicked element
+        $(this).data('toggle','button');        
+    });
 });
 
 function genarateRoomSelect() {
@@ -400,3 +409,4 @@ function genereatePersonsSelect(priceId, container) {
     }
 
 }
+
