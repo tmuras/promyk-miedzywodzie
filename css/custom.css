@@ -65,6 +65,13 @@
 	cursor: pointer;
 }
 
-.slide, .story {
-
+.gallery-description {
+  	position: absolute !important;
+  	width: 100% !important;
+  	top: 50px;
+  	text-align: center;
+  	display: block !important;
+  	margin-left: auto !important;
+  	margin-right: auto !important;
+  	color: #000;
 }

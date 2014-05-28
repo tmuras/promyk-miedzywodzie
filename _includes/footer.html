@@ -14,11 +14,18 @@
     menu_focus( lis[0], 1 );
     
     $(".fancybox").fancybox({
-      padding: 10,
+      padding: 20,
+      fitToView: false,
+      height: 600,
+      width: 600,
       helpers: {
         overlay: {
           locked: false
-        }
+        },
+        title: { type: 'inside'}
+      },
+      afterLoad: function(){
+         this.title = this.title + ' ' + $(this.element).find('img').attr('alt');
       }
     });
   

@@ -1,6 +1,6 @@
 # Site settings
 title: Promyk Międzywodzie
-email: your-email@domain.com
+email: "biuro@miedzywodzie.biz"
 description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
 baseurl: ""
 url: "http://yourdomain.com"
@@ -8,3 +8,27 @@ url: "http://yourdomain.com"
 # Build settings
 markdown: kramdown
 permalink: pretty
+
+# Contact info
+adress: "PROMYK ul. Słoneczna 12c 72-415 Międzywodzie"
+map_adress: "https://maps.google.pl/maps?q=PROMYK+ul.+S%C5%82oneczna+12c+72-415+Mi%C4%99dzywodzie&hl=pl&ie=UTF8&ll=54.005133,14.697733&spn=0.007882,0.019741&sll=51.953751,19.134379&sspn=8.466343,20.214844&hq=PROMYK+ul.+S%C5%82oneczna+12c&hnear=72-415+Mi%C4%99dzywodzie,+kamie%C5%84ski,+Wojew%C3%B3dztwo+zachodniopomorskie&t=m&z=16&iwloc=A"
+phone: "+48 501 355578 +48 502 034425"
+
+# Gallery settings
+imgpaths: images/gallery/
+
+rooms_description: 
+    2: 'Pokój 4-osobowy z łazienką, na parterze.'
+    3: "Pokój 3-osobowy (kanapa 2-osobowa + jedynka) z osobną łazienką i ubikacją. Posiada bezpośrednie wyjście na zewnątrz."
+    5: "Pokój 4-osobowy, z dwoma kanapami 2-osobowymi, łazienką. W pokoju znajduje się aneks kuchenny."
+    6: "W pokoju znajduje się kominek oraz zapas drewna; dwie kanapy 2-osobowe; łazienka. Pokój jest odpowiedni dla 3-4 osób."
+    7: "2-osobowy pokój z łożem małżeńskim, balkonem i łazienką."
+    8: "W 3-osobowym pokoju nr 8 znajduje się kanapa 2-osobowa, łóżko 1-osobowe. Pokój posiada własną łazienkę lecz wejście do niej znajduje się na korytarzu."
+    9: "2-osobowy pokój z łazienką i łożem małżeńskim."
+    10: "4-osobowy pokój z kanapą 2-osobową i dwoma łóżkami 1-osobowymi oraz łazienką."
+    11: "Pokój z balkonem, kanapą 2-osobową i łazienką."
+    12: "Pokój z kanapą 2-osobową i łóżkiem 1-osobowym. Pokój posiada własną łazienkę ale z dojściem przez korytarz."
+    13: "Pokój 2-osobowy z łożem małżeńskim i łazienką. W pokoju znajduje się okno połaciowe."
+    14: "Pokój z kanapą 2-osobową, dwoma łóżkami 1-osobowymi oraz łazienką."
+    15: "Pokój z kanapą 2-osobową oraz łazienką. Okno połaciowe."
+    16: "Pokój na poddaszu z kanapą 2-osobową, trzema łóżkami 1-osobowymi oraz łazienką. Uwaga! Do pokoju prowadzą strome schody."
