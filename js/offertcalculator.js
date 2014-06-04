@@ -313,23 +313,24 @@ var prices = [
     
 ];
 
+var maxPersons = 5;
+
 $(document).ready(function() {
 
 	var date_start = $("#date_start").datepicker();
 	var date_end = $("#date_end").datepicker();
-	var roomsSelected = $("#rooms");
 
-    genarateRoomSelect();
-
-    $(".person").on("click", function () {
-        $("#person-value").val($(this).text());
-    });
+    genereatePersonsSelect();
 
 	$("#calculate").on("click", function() {
 		if (date_start.val() && date_end.val()) {
 
-            var room = parseInt($("#rooms").val());
-            var priceForRoom = parseInt($("#person-value").val());
+            if (date_start.val() > date_end.val())
+            {
+                console.log("Beginnig date cant be higher than endign date")
+            }
+
+            var persons = parseInt($("#persons input:checked").val());
 			var day_start = $("#date_start").datepicker('getDate').getDate();                 
         	var month_start = $("#date_start").datepicker('getDate').getMonth() + 1; 
         	var year_start = $("#date_start").datepicker('getDate').getYear();
@@ -342,42 +343,60 @@ $(document).ready(function() {
 
   	       	var days = (Math.abs((time_end-time_begin)/86400000));
 
-            var sum = 0;
+            
+            var rooms_selected = ""; 
 
-            for (var i=time_begin.getTime(); i <= time_end.getTime() - 86400000; i+= 86400000) {
-                var d = new Date(i);
+            for (var i = 0; i < prices.length; i++) {
 
-                if (d.getMonth()+1 >= periods.high.beginMonth && 
-                    d.getMonth()+1 <= periods.high.endMonth &&
-                    d.getDate() >= periods.high.beginDay &&
-                    d.getDate() <= periods.high.endDay) {
-                    sum += prices[room].season_ID.high[priceForRoom];
-                }
-                else {
-                    sum += prices[room].season_ID.low[priceForRoom];
-                }
-            }
+                if (prices[i].season_ID.low[persons] > 0) {
+                    var sum = 0;
 
-            $("#price").html(sum);
+                    for (var j=time_begin.getTime(); j <= time_end.getTime() - 86400000; j+= 86400000) {
+                        var d = new Date(j);
+
+                        if (d.getMonth()+1 >= periods.high.beginMonth && 
+                            d.getMonth()+1 <= periods.high.endMonth &&
+                            d.getDate() >= periods.high.beginDay &&
+                            d.getDate() <= periods.high.endDay) {
+                            sum += prices[i].season_ID.high[persons];
+                        }
+                        else {
+                            sum += prices[i].season_ID.low[persons];
+                        };
+                    };
+
+                    var room_selected = {
+                        "name": prices[i].room,
+                        "price": sum
+                    };
+                    rooms_selected += "<li class='list-group-item'>Pokój " + room_selected.name +
+                                      " cena: <b>" + room_selected.price + "</b> PLN"
+                                      "</li>";
+                };
+
+            };
+            console.log(rooms_selected);
+            
             $("#days").html(days);
+            $("#price").html(rooms_selected)
 		}
 
 	});
 
-    roomsSelected.on("change", function () {
+    // roomsSelected.on("change", function () {
 
-        var pricesForPersons = prices[roomsSelected.val()].season_ID.low
-        $("#persons").empty();
-        for (var p in pricesForPersons) {
+    //     var pricesForPersons = prices[roomsSelected.val()].season_ID.low
+    //     $("#persons").empty();
+    //     for (var p in pricesForPersons) {
 
-            if (pricesForPersons[p] > 0 ) {
-                $("#persons").append("<button type='button' class='btn btn-primary person'>" + p + "</button>")
-            }
-        };
-        $("#person-value").val($(".person:first").text());
-        $(".person:first").data('toggle','button');
+    //         if (pricesForPersons[p] > 0 ) {
+    //             $("#persons").append("<button type='button' class='btn btn-primary person'>" + p + "</button>")
+    //         }
+    //     };
+    //     $("#person-value").val($(".person:first").text());
+    //     $(".person:first").data('toggle','button');
         
-    }).change();
+    // }).change();
 
     $('.person').click(function(){
         //Removing `data-toggle` from all elements
@@ -397,16 +416,16 @@ function genarateRoomSelect() {
     
 }
 
-function genereatePersonsSelect(priceId, container) {
-    
-    var price = prices[priceId].season_ID.low
-    var i = 1;
-    for (var k in price) { 
-        if (price[k] > 0) {
-            $("<input/>").attr(value, i).appendTo(container)
-        }
-        i++;
+function genereatePersonsSelect() {
+
+    var container = $("#persons");
+    for (var i=1; i<=maxPersons; i++) { 
+        
+           container.append('<label id="persons" class="btn btn-primary">' +
+            '<input type="radio" name="options" value="' + i + '">' + i +
+            '</label>')
     }
 
 }
+
 

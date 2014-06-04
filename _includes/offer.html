@@ -8,14 +8,11 @@
 			<div class="hr">&nbsp;</div>
 		</div><!-- /row -->
 		<div class="row content-row">
-			<div class="col-12 col-sm-4 font-light">
+			<div class="col-12 col-sm-6 font-light">
 				<input type="text" id="date_start" class="selectdate" placeholder="Początek rezerwacji">
 			</div>
-			<div class="col-12 col-sm-4 font-light">
+			<div class="col-12 col-sm-6 font-light">
 				<input type="text" id="date_end" class="selectdate" placeholder="Koniec rezerwacji">
-			</div>
-			<div class="col-12 col-sm-4 font-light">
-				<select id="rooms" class="selectpicker"></select>
 			</div>
 		</div>
 		</div><!-- /row -->
@@ -23,10 +20,9 @@
 			<div class="col-1 col-sm-4 hidden-sm">&nbsp;</div>
 			<div class="col-12 col-sm-4 font-light">
 				<h2 class="font-thin">Ilość osób:</h2>
-				<div id="persons" class="btn-group">
+				<div id="persons" class="btn-group" data-toggle="buttons">
 
 				</div>
-				<input type="hidden" id="person-value"/>
 			</div>
 			<div class="col-1 col-sm-4 hidden-sm">&nbsp;</div>
 
@@ -37,14 +33,16 @@
 			</div>
 		</div>
 		<div class="row content-row">
-			<div class="col-1 col-sm-4 hidden-sm">&nbsp;</div>
-			<div class="col-12 col-sm-2">
-				<h2 class="font-thin">cena: </h2><div id="price">Nie wybrano</div>
+			<div class="col-1 col-sm-3 hidden-sm">&nbsp;</div>
+			<div class="col-12 col-sm-3">
+				<h2 class="font-thin">cena: </h2><ul id="price" class="list-group">
+													<div class="well">Nie wybrano</div>
+												</ul>
 			</div>
-			<div class="col-12 col-sm-2">
-				<h2 class="font-thin">dni: </h2><div id="days">Nie wybrano</div>
+			<div class="col-12 col-sm-3">
+				<h2 class="font-thin">dni: </h2><div id="days" class="well">Nie wybrano</div>
 			</div>
-			<div class="col-1 col-sm-4 hidden-sm">&nbsp;</div>
+			<div class="col-1 col-sm-3 hidden-sm">&nbsp;</div>
 			</div>
 		</div><!-- /row -->
 	</div><!-- /container -->

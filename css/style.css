@@ -614,3 +614,11 @@ body {
 .navigation-slide {
 	cursor: pointer;
 }
+
+.list-group-item {
+	color: #000000 !important;
+}
+
+.well {
+	color: #000000 !important;
+}
