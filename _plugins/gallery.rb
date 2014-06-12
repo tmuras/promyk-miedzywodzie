@@ -15,9 +15,9 @@ module Jekyll
 		  next if room == "." or room == ".."
 		  Dir.foreach(File.join(@path, room)) do |picture|
 		  	next if picture == "." or picture == ".."
-		  	@subdirs << "<div class=\"col-12 col-sm-6 col-lg-6\">"
-		  	@subdirs << "<a data-fancybox-group=\"portfolio\" class=\"fancybox\" href=\"#{File.join(@pathRelative, room, picture)}\">"
-		  	@subdirs << "<img class=\"thumb\" src=\"#{File.join(@pathRelative, room, picture)}\" alt=\"Pok&#243j nr #{room}. #{data["rooms_description"][room.to_i]}\">"
+		  	@subdirs << "<div class=\"col-sm-3\">"
+		  	@subdirs << "<a data-fancybox-group=\"portfolio\" class=\"fancybox thumbnail\" href=\"#{File.join(@pathRelative, room, picture)}\">"
+		  	@subdirs << "<img class=\"thumb img-responsive\" src=\"#{File.join(@pathRelative, room, picture)}\" alt=\"Pok&#243j nr #{room}. #{data["rooms_description"][room.to_i]}\">"
 		  	@subdirs << "<h2 class=\"gallery-description\">Pok&#243j #{room}</h2></a>"
 		  	@subdirs << "</div>"
 		  end

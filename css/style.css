@@ -462,8 +462,21 @@ body {
 #slide-6 {
 	background-color: #2f2f2f;
 	color: #e4e6e5;
-	padding-bottom: 350px;
+	padding-bottom: 50px;
 	padding-top: 90px;
+}
+
+#slide-6 .img-responsive {
+	display: inline-block;
+	height: 100% !important;
+	max-width: 100% !important;
+}
+
+#slide-6 .thumbnail {
+	background-color: #646464 !important;
+	border: 1px solid #575757 !important;
+	margin: 5px !important;
+	height: 340px !important;
 }
 
 @media (max-width: 767px) {
