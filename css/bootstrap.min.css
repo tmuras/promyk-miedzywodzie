@@ -2564,6 +2564,7 @@ button.close {
 .nav > li {
   position: relative;
   display: block;
+width: 115px;
 }
 
 .nav > li > a {
