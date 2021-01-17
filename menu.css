@@ -1,0 +1,26 @@
+#navcontainer ul
+{
+	padding: 0;
+	margin: 0;
+	float: right;
+	width: 100%;
+}
+
+#navcontainer ul li
+{
+	display: inline;
+}
+
+#navcontainer ul li a
+{
+	padding: 6px 10px;
+	color: #FFF;
+	text-decoration: none;
+	float: right;
+}
+
+#navcontainer ul li a:hover
+{
+	background-color: #FFF;
+	color: #990031;
+}

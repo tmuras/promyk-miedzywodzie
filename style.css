@@ -1,0 +1,178 @@
+body
+{
+	padding: 0;
+	margin: 0;
+	background: #0EA4D6;
+/*
+original: #990031;
+light blue: #0EA4D6;
+*/
+	color: #FFF;
+	font-family: arial, verdana, helvetica, tahoma, sans-serif;
+	font-size: 80%;
+	line-height: 150%;
+}
+
+.galleryImg
+{
+	border: 0;
+	height: 91px;
+	width: 100px;
+}
+
+a
+{
+	text-decoration: none;
+	color: #FF80A8;
+}
+
+a:hover
+{
+	text-decoration: none;
+	color: #FFF;
+}
+
+#centrecontainer
+{
+	position: absolute;
+	top: 50%;
+	left: 0px;
+	width: 100%;
+}
+
+#outercontainer
+{
+	margin-left: -400px;
+	position: absolute;
+	top: -236px;
+	left: 50%;
+}
+
+#header
+{
+	width: 800px;
+	height: 31px;
+	letter-spacing: 1px;
+}
+
+#container
+{
+	border: 20px solid #FFF;
+	width: 760px;
+	height: 370px;
+}
+
+#containerleft
+{
+	float: left;
+	width: 350px;
+	height: 350px;
+	background-image:url('images/main2.jpg');
+	border-right: 20px solid #FFF;
+	padding: 10px;
+
+	/*text-align: right;
+	color: #DEFFFF;
+	color: #FFF9B9;*/
+}
+
+#containerleft a
+{
+	text-decoration: none;
+	color: #FFF;
+}
+
+#containerleft a:hover
+{
+	text-decoration: none;
+	color: #FF80A8;
+}
+
+#containerleft h2
+{
+	margin: 0;
+	padding: 0;
+	font-family: helvetica, arial, verdana, tahoma, sans-serif;
+	letter-spacing: -3px;
+	font-size: 250%;
+	text-align: right;
+}
+
+#containerleftgallery
+{
+	float: left;
+	width: 350px;
+	height: 350px;
+
+	background-image:url('images/main2.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+
+	border-right: 20px solid #FFF;
+	padding: 10px;
+
+	/*padding: 10px;*/
+	/*text-align: center;*/
+	/*text-align: right;
+	color: #DEFFFF;
+	color: #FFF9B9;*/
+}
+
+#containerright
+{
+	float: left;
+	width: 350px;
+	height: 350px;
+	background: #0D94C1;
+/*
+original: #660021;
+dark blue: #0D94C1;
+*/
+	overflow: auto;
+	padding: 10px;
+}
+
+#containerright h2
+{
+	margin: 0;
+	padding: 0;
+	font-family: helvetica, arial, verdana, tahoma, sans-serif;
+	letter-spacing: -2px;
+	font-size: 200%;
+	border-bottom: 1px solid #FFF;
+	padding-bottom: 5px;
+	width: 75%;
+}
+
+#containerright a
+{
+color: #FFF;
+text-decoration: underline;
+}
+
+.va-middle {
+position:relative;
+/*top:50%;
+margin-top:-50px;*/
+	/*vertical-align:middle;*/
+}
+
+#footer
+{
+	width: 800px;
+	text-align: right;
+	padding: 5px 0px;
+	color: #000000;
+}
+
+#footer a
+{
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+#footer a:hover
+{
+	text-decoration: none;
+	color: #FFF;
+}

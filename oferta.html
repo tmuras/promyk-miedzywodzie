@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+<meta http-equiv="Content-Language" content="pl" />
+<meta name="AUTHOR" content="Tomasz Muras" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="KEYWORDS" content="" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="stylesheet" type="text/css" href="menu.css" />
+<title>Wakacje w Międzywodziu</title>
+<script type="text/javascript" src="calendar/calendar.js"></head>
+<body>
+
+<script type="text/javascript">
+    $(function() {
+        $("#submit").click (
+        function() {
+            var from=$("#from").val();
+            var to=$("#to").val();
+            $("#result").load("http://poranek.miedzywodzie.biz/cena.php?od="+from+"&do="+to);
+            return false;
+        });
+
+
+        $("#from").datepicker({ minDate: new Date(2015,4,1), maxDate: new Date(2015,7,31),
+          beforeShow: function(input, inst) { inst.dpDiv.css({marginLeft: -60});}
+        });
+        $("#to").datepicker({ minDate: new Date(2015,4,1), maxDate: new Date(2015,7,31) });
+
+        $.datepicker.regional['pl'] = {
+            closeText: 'Zamknij',
+            prevText: '&#x3c;Poprzedni',
+            nextText: 'Następny&#x3e;',
+            currentText: 'Dziś',
+            monthNames: ['Styczeń','Luty','Marzec','Kwiecień','Maj','Czerwiec',
+                'Lipiec','Sierpień','Wrzesień','Październik','Listopad','Grudzień'],
+            monthNamesShort: ['Sty','Lu','Mar','Kw','Maj','Cze',
+                'Lip','Sie','Wrz','Pa','Lis','Gru'],
+            dayNames: ['Niedziela','Poniedziałek','Wtorek','Środa','Czwartek','Piątek','Sobota'],
+            dayNamesShort: ['Nie','Pn','Wt','Śr','Czw','Pt','So'],
+            dayNamesMin: ['N','Pn','Wt','Śr','Cz','Pt','So'],
+            weekHeader: 'Tydz',
+            dateFormat: 'd.mm',
+            firstDay: 1,
+            isRTL: false,
+            showMonthAfterYear: false,
+            yearSuffix: ''};
+        $.datepicker.setDefaults($.datepicker.regional['pl']);
+    });
+</script>
+
+<head>
+<link href="calendar/calendar.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="calendar/calendar.js"></script>
+</head>
+
+<div id="centrecontainer">
+
+<div id="outercontainer">
+	
+<div id="header">
+	<div id="navcontainer">
+		<ul id="navlist">
+			<li><a href="index.html" name="Glowna" title="Główna">Strona główna</a></li>
+			<li><a href="oferta.html" name="Oferta" title="Oferta">Oferta</a></li>
+			<li><a href="galeria.html" name="Galeria" title="Galeria">Galeria</a></li>
+			<li><a href="en/index.html" name="English Version" title="English Version">English Version</a></li>
+		</ul>
+	</div>
+</div>
+	
+
+<div id="container">
+<div id="containerleft">
+	<h2>promyk.miedzywodzie.biz</h2>
+</div>
+
+<div id="containerright">
+
+<h2>Oferta</h2>
+<h3>Podane ceny są kwotami za osobę, za dobę:</h3>
+<ul>
+<li> 70zł za pokój 2-osobowy z łazienką i aneksem kuchennym, za osobę</li>
+<li> 65zł za pokój 2-osobowy z łazienką, za osobę</li>
+<li> 55zł / 50zł za pokój 3,4-osobowy z łazienką, za osobę</li>
+</ul>
+<h3>Ceny poza sezonem za osobę, za dobę:</h3>
+<ul>
+<li>45zł za osobę, za dowolny pokój</li>
+</ul>
+
+<h4>Pobyt dla dzieci do 2 roku życia bezpłatny.</h4>
+<h4>Wyższe stawki obowiązują w terminach <b>1 lipca - 31 sierpnia</b>.</h4>
+
+
+ 
+ 
+<div id="callContainer"></div> 
+
+<h4><p>Prosimy zapoznać się z <a href="images/regulamin.pdf">regulaminem Pensjonatu</a></p></h4>
+<h4>Serdecznie zapraszamy!</h4>
+		</div>
+	</div>
+<div id="footer">
+
+<a href="http://www.miedzywodzie.biz/zima/" name="Zima w Międzywodziu" title="Zima nad morzem">Zima 2010 nad morzem</a>
+
+&nbsp;
+
+<a href="en/index.html" name="English Version" title="English Version"><img src="images/eng.jpeg" /></a>
+
+&nbsp;
+
+
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31505879-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
